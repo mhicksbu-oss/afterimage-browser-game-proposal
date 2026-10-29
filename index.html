@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A browser-game proposal exploring hallucination, memory, and player-authored reality.">
+  <title>AFTERIMAGE — Browser Game Proposal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Afterimage home"><span class="brand-dot"></span>AFTERIMAGE</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Proposal sections">
+      <a href="#game">Game</a><a href="#case-study">Case study</a><a href="#discussion">AI discussion</a>
+      <a href="#concept">Concept</a><a href="#journey">Journey</a><a href="#style">Style + sound</a><a href="#plan">Build plan</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="game" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Browser game proposal · working title</p>
+        <h1 id="hero-title">AFTER<span>IMAGE</span></h1>
+        <p class="deck">You are the night archivist of a museum that remembers rooms differently each time you look. Inspect unstable records, decide which details feel true, and watch your choices become the building’s history.</p>
+        <div class="hero-actions"><a class="button primary" href="#journey">Follow the journey</a><a class="button secondary" href="#case-study">Read the case study</a></div>
+        <p class="micro">The title is provisional and can change after our title discussion.</p>
+      </div>
+      <div class="hero-visual" aria-label="Interactive representative visual of a changing archive room">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="archive-card">
+          <div class="card-top"><span>RECORD 04:17</span><span id="certainty">63% CERTAIN</span></div>
+          <svg viewBox="0 0 600 430" role="img" aria-label="A surreal archive room with a door, eye, and shifting objects">
+            <rect width="600" height="430" rx="22" fill="#d9d4ff"/>
+            <path d="M0 300 188 215 356 266 600 170V430H0Z" fill="#9386ff"/>
+            <path d="M205 70h205v282H205z" fill="#17162a"/><path d="M230 95h155v257H230z" fill="#ff735f"/>
+            <circle cx="308" cy="205" r="62" fill="#fff9e8"/><ellipse cx="308" cy="205" rx="38" ry="20" fill="#17162a"/><circle cx="308" cy="205" r="9" fill="#b9ff5a"/>
+            <path class="visual-drift" d="M56 90h108v152H56zM459 55h83v115h-83z" fill="none" stroke="#17162a" stroke-width="6"/>
+            <path d="m38 356 105-43 55 87-121 20zm423-58 97 35-35 82-114-40z" fill="#b9ff5a" stroke="#17162a" stroke-width="5"/>
+          </svg>
+          <div class="dial-wrap"><label for="perception">Shift perception</label><input id="perception" type="range" min="0" max="100" value="63"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case" id="case-study" aria-labelledby="case-title">
+      <div class="section-number">01</div><div class="section-intro"><p class="eyebrow">Played case study</p><h2 id="case-title">The Ratchelor</h2><p class="lead">A useful model for making repeated selection feel personal, funny, and consequential.</p></div>
+      <div class="source-banner"><strong>The Ratchelor: A Rat Dating Game</strong><span>Algorat · released 2021 · browser visual novel</span><a href="https://algorat.itch.io/the-ratchelor-a-rat-dating-sim" target="_blank" rel="noreferrer">Play on itch.io ↗</a></div>
+      <div class="two-col">
+        <article class="panel"><h3>Credited contributors</h3><ul class="credit-list"><li><span>Char Stiles</span><small>Algorat co-creator</small></li><li><span>Connie Ye</span><small>Algorat co-creator</small></li><li><span>Tatyana Mustakos</span><small>Art direction, lead art, character/dialogue systems</small></li><li><span>Caroline Hermans</span><small>Algorat co-creator</small></li></ul><p class="source-note">Credits are confirmed by <a href="https://algorat.club/" target="_blank" rel="noreferrer">Algorat’s official site</a> and <a href="https://tademu.com/projects/ratchelor.html" target="_blank" rel="noreferrer">Mustakos’s project notes</a>.</p></article>
+        <article class="panel"><h3>What the creators state</h3><p>The official page frames the experience as becoming an eligible single rat, meeting 21 contestants, holding intimate conversations, and eliminating candidates round by round. Mustakos describes a roughly ten-minute structure in which players select seven contestants and give roses.</p><p class="source-note"><a href="https://algorat.itch.io/the-ratchelor-a-rat-dating-sim" target="_blank" rel="noreferrer">Official project page ↗</a> · <a href="https://tademu.com/projects/ratchelor.html" target="_blank" rel="noreferrer">Creator development notes ↗</a></p></article>
+      </div>
+      <h3 class="subhead">Three meaningful moments</h3>
+      <div class="moment-grid"><article><b>01</b><h4>Becoming the Ratchelor</h4><p>Choosing a portrait makes self-presentation the first authored decision.</p></article><article><b>02</b><h4>Casting seven</h4><p>Selecting seven from 21 turns visual curiosity into an immediate commitment.</p></article><article><b>03</b><h4>Reaction and rejection</h4><p>Brief replies trigger expressive reactions; roses later transform light conversation into consequence.</p></article></div>
+      <h3 class="subhead">Player-action events observed</h3>
+      <ol class="event-list"><li><span>Choose</span> one of four Ratchelor portraits.</li><li><span>Cast</span> seven contestants from a grid of 21.</li><li><span>Advance</span> into a one-on-one conversation.</li><li><span>Respond</span> with a short reaction such as “Yuck,” “Wow!” or “Yikes.”</li><li><span>Read</span> the character’s animated emotional response.</li><li><span>Give roses</span> to decide who continues into later rounds.</li></ol>
+      <aside class="interpretation"><strong>My interpretation — not a creator claim</strong><p>The game’s strength is not branching complexity; it is the clear rhythm of notice → choose → react → commit. AFTERIMAGE borrows that readable rhythm while replacing romance selection with decisions about what is real.</p></aside>
+    </section>
+
+    <section class="section dark" id="discussion" aria-labelledby="discussion-title">
+      <div class="section-number">02</div><div class="section-intro"><p class="eyebrow">Critical discussion with AI</p><h2 id="discussion-title">Research, gaps, decision</h2></div>
+      <div class="research-grid">
+        <article><h3>Verified</h3><p>Algorat identifies itself as a four-person rat-centric computational arts collective. The trilogy has more than one million reported playthroughs. Mustakos states that she led art across the series and worked on characters, dialogue, reactions, and interface.</p><p class="source-note"><a href="https://studioforcreativeinquiry.org/project/algorat-collective" target="_blank" rel="noreferrer">STUDIO profile ↗</a> · <a href="https://tademu.com/projects/ratchelor.html" target="_blank" rel="noreferrer">Creator notes ↗</a></p></article>
+        <article><h3>Creator perspective</h3><p>Connie Ye describes an interest in playful, personalized interaction and “optimizing for joy.” In a later public talk, she said Algorat makes games for themselves and writes dialogue they find funny.</p><p class="source-note"><a href="https://art.cmu.edu/news/student/senior-spotlight-connie-ye/" target="_blank" rel="noreferrer">CMU interview ↗</a> · <a href="https://richmondsunsetnews.com/2025/03/09/emerging-arts-scene-finds-a-home-at-the-richmonds-internet-archive/" target="_blank" rel="noreferrer">Talk report ↗</a></p></article>
+        <article class="gap"><h3>What I could not verify</h3><ul><li>A detailed technical postmortem, source code, or engine architecture.</li><li>Who composed or designed the sound; the in-game credits name YouTube Audio Library, Freesound, and Mixkit, but not individual tracks or a sound lead.</li><li>The exact writing/programming split among members beyond Mustakos’s documented role.</li></ul></article>
+      </div>
+      <div class="exchange"><p class="eyebrow">Selected exchange</p><blockquote><p><b>AI:</b> “Random glitches could represent hallucination.”</p><p><b>Designer:</b> “Randomness alone makes it decorative. What player action causes the world to change?”</p><p><b>AI:</b> “Let the system remember what the player confirms, then reuse those details as facts.”</p></blockquote><div class="decision"><span>Conclusion + design decision</span><p>Hallucination becomes a feedback loop between expectation and evidence. The game will use deterministic choice propagation—not random visual noise—so every later distortion can be traced to something the player accepted.</p></div></div>
+    </section>
+
+    <section class="section" id="concept" aria-labelledby="concept-title">
+      <div class="section-number">03</div><div class="section-intro"><p class="eyebrow">Narrative + concept</p><h2 id="concept-title">Hallucination as authored memory</h2></div>
+      <div class="concept-grid"><article><span>Interpretation</span><h3>Not seeing “nothing”</h3><p>Hallucination is the mind confidently completing incomplete evidence. The player does not simply witness distortions; their decisions teach the archive what to show next.</p></article><article><span>World</span><h3>A museum after closing</h3><p>Records, rooms, and labels contradict each other. Accepted details migrate between exhibits until the building forms one unstable history.</p></article><article><span>Player role</span><h3>Night archivist</h3><p>Inspect fragments, answer certainty prompts, and file one official version before sunrise.</p></article><article><span>Intended experience</span><h3>Curiosity → doubt → ownership</h3><p>A quiet, tense fifteen-minute experience in which the final reveal feels surprising but personally caused.</p></article></div>
+    </section>
+
+    <section class="section journey" id="journey" aria-labelledby="journey-title">
+      <div class="section-number">04</div><div class="section-intro"><p class="eyebrow">Interaction + player journey</p><h2 id="journey-title">A traceable descent</h2></div>
+      <div class="flowchart" aria-label="Player journey flowchart"><div><small>Opening</small><b>Clock in</b><p>Learn inspect / confirm</p></div><i>→</i><div><small>Stage 1</small><b>Calibrate</b><p>Choose the true detail</p></div><i>→</i><div><small>Stage 2</small><b>Contaminate</b><p>Choices reappear</p></div><i>→</i><div><small>Stage 3</small><b>Confront</b><p>Resolve two histories</p></div><i>→</i><div><small>Ending</small><b>Publish</b><p>See your authored room</p></div></div>
+      <div class="storyboard" aria-label="Five-panel storyboard">
+        <article><div class="frame f1"><span>01:13 AM</span><i></i></div><h3>1 · Opening</h3><p>A terminal asks the player to verify a missing-room record.</p></article>
+        <article><div class="frame f2"><span>WHICH WAS HERE?</span><i></i><i></i></div><h3>2 · Calibration</h3><p>Choose between two plausible objects; one enters memory.</p></article>
+        <article><div class="frame f3"><i></i><i></i><i></i></div><h3>3 · Contamination</h3><p>The chosen object appears where it should not exist.</p></article>
+        <article><div class="frame f4"><span>RECORDS CONFLICT</span><i></i></div><h3>4 · Confrontation</h3><p>Commit to a history despite contradictory evidence.</p></article>
+        <article><div class="frame f5"><span>ARCHIVE ACCEPTED</span><i></i></div><h3>5 · Ending</h3><p>The museum publishes a room assembled from the player’s certainties.</p></article>
+      </div>
+    </section>
+
+    <section class="section dark" id="style" aria-labelledby="style-title">
+      <div class="section-number">05</div><div class="section-intro"><p class="eyebrow">Style + sound guide</p><h2 id="style-title">Warm evidence, uneasy motion</h2></div>
+      <div class="style-grid">
+        <article class="palette-card"><h3>Visual system</h3><div class="swatches"><i style="--c:#17162a"></i><i style="--c:#d9d4ff"></i><i style="--c:#ff735f"></i><i style="--c:#b9ff5a"></i><i style="--c:#fff9e8"></i></div><p>Near-black grounds the archive; lilac suggests unstable memory; coral marks evidence; acid green marks player-confirmed “truth.”</p></article>
+        <article><h3>Interface</h3><p>Large framed scenes, short response choices, and immediate reactions are informed by Algorat’s readable conversation loop—not copied imagery.</p><p class="source-note">Reference: Algorat, <a href="https://algorat.itch.io/the-ratchelor-a-rat-dating-sim" target="_blank" rel="noreferrer">The Ratchelor ↗</a></p></article>
+        <article><h3>Motion</h3><p>Objects drift only after a decision. Slow parallax signals doubt; one sharp snap confirms a filed memory. Reduced-motion users receive fades instead.</p><p class="source-note">Original motion direction for AFTERIMAGE.</p></article>
+        <article><h3>Sound</h3><p>Paper, fluorescent hum, distant HVAC, and a dry confirmation click. Each accepted detail adds one pitched layer, making the ending audibly player-authored.</p><p class="source-note">Planned sources: original field recordings and generated Web Audio tones. No third-party track is selected.</p></article>
+      </div>
+      <aside class="sound-gap"><b>Case-study sound note</b><p>The Ratchelor’s in-game credits disclose YouTube Audio Library, Freesound, and Mixkit. I could not verify specific files or a named sound designer, so those details are intentionally not attributed.</p></aside>
+    </section>
+
+    <section class="section plan" id="plan" aria-labelledby="plan-title">
+      <div class="section-number">06</div><div class="section-intro"><p class="eyebrow">Two-week build plan</p><h2 id="plan-title">Build small, test the loop</h2></div>
+      <div class="weeks"><article><div><span>Week 2</span><h3>Build the playable spine</h3></div><ul><li>Responsive browser shell and one complete room</li><li>Inspect, compare, and confirm interactions</li><li>Three-stage choice-state system</li><li>Five key illustrations and UI motion</li><li>Generated tone and original ambience prototype</li><li>Complete ending assembled from stored choices</li></ul><strong>Deliverable: one 10–15 minute playable path.</strong></article><article><div><span>Week 3</span><h3>Test, clarify, refine</h3></div><ul><li>Test with 5 players on laptop and phone</li><li>Track where cause-and-effect becomes unclear</li><li>Rewrite prompts and improve choice feedback</li><li>Adjust pacing, contrast, sound, and motion</li><li>Add reduced motion and keyboard support</li><li>Fix errors and publish the approved build</li></ul><strong>Success: 4 of 5 testers can explain how they shaped the ending.</strong></article></div>
+      <div class="scope"><p><b>Protected scope:</b> one room, three stages, one ending system. Extra rooms, procedural art, and save accounts remain stretch goals.</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span class="brand-dot"></span>AFTERIMAGE</a><p>Game proposal · researched and prepared October 28, 2026</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
